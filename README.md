@@ -1,50 +1,51 @@
-# Welcome to your Expo app 👋
+# Welcome👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This project is a React Native application using Expo, featuring a "Guess My Number" game. Below is a comprehensive guide on how the game is structured and functions.
 
-## Get started
+## 📋 Table of Contents
 
-1. Install dependencies
+- [Overview](#overview)
+- [Key Components](#key-components)
+- [How the Game Works](#how-the-game-works)
+- [Get Started](#get-started)
+
+## 📖 Overview
+
+The "Guess My Number" game lets the user pick a number between 1 and 99. The app attempts to guess the number by making random guesses, and the user provides feedback on whether the guess is too high or too low. The game continues until the app correctly guesses the number.
+
+## 🛠 Key Components
+
+- **[StartGameScreen.tsx](screens/startgamescreen.tsx)**: Allows the user to input a number and starts the game.
+- **[GameScreen.tsx](screens/gamescreen.tsx)**: Handles the guessing logic and user feedback.
+- **[GameOverScreen.tsx](screens/gameoverscreen.tsx)**: Displays the game over screen with results.
+- **[NumberContainer.tsx](components/game/numbercontainer.tsx)**: Displays the current guess.
+- **[GuessLogItem.tsx](components/game/guesslogitem.tsx)**: Logs all guesses made by the app.
+- **[index.tsx](app/index.tsx)**: Main entry point managing screen transitions.
+
+## 🔄 How the Game Works
+
+1. **Start**: The user inputs a number on the [StartGameScreen.tsx](screens/startgamescreen.tsx). Once confirmed, the game transitions to the [GameScreen.tsx](screens/gamescreen.tsx).
+2. **Guessing**: The app makes an initial guess and displays it. The user can then indicate if the guess is too high or too low.
+3. **Feedback Loop**: Based on the user's feedback, the app adjusts its guessing range and makes a new guess.
+4. **Game Over**: When the app guesses the correct number, the [GameOverScreen.tsx](screens/gameoverscreen.tsx) is displayed, showing the number of attempts taken.
+
+## 🚀 Get Started
+
+1. **Install dependencies**
 
    ```bash
    npm install
    ```
 
-2. Start the app
+2. **Run the app**
 
    ```bash
-   npx expo start
+   npm start
    ```
 
-In the output, you'll find options to open the app in a
+   You can open the app in a:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+   - Development build
+   - Android emulator
+   - iOS simulator
+   - Expo Go, a limited sandbox for trying out app development with Expo
